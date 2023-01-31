@@ -11,7 +11,7 @@ const customAssertions = (_chai, utils) => {
   function _someCustomMethodExtension(_super) {
     return function someCustomMethodExtension() {
       if (utils.flag(this, "insideSomeCustomChain")) {
-        new _chai.Assertion(this._obj).to.have.property("target", "_blank");
+        new _chai.Assertion(this._obj).to.have.attr("target", "_blank");
       } else {
         _super.apply(this, arguments);
       }
